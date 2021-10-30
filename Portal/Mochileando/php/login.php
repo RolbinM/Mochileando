@@ -15,7 +15,7 @@
         
         $fila = sqlsrv_fetch_object( $ejecutar);
         
-        if($fila->TipoUsuario == 3) {
+        if($fila->TipoUsuario == 1) {
             $_SESSION ['usuario'] = $usuario;
             //header("location: ../driver.php");
             header("location: ../menuLateral.html");
