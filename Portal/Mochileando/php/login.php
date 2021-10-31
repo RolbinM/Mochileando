@@ -14,7 +14,8 @@
     if($ejecutar) {
         
         $fila = sqlsrv_fetch_object( $ejecutar);
-        
+        echo"<script>alert('$fila->TipoUsuario')</script>";
+                
         if($fila->TipoUsuario == 1) {
             $_SESSION ['usuario'] = $usuario;
             //header("location: ../driver.php");

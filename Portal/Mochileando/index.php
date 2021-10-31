@@ -39,7 +39,10 @@
                             </div>
                         </div>
 
-                        <p>No tienes una cuenta? <a href="#">Registrate aqui</a></p>
+                        <p>¿No tienes una cuenta? </p>
+                        <br />
+                        <p>Crea una cuenta de cliente <a href="registrarCliente.php">aqui</a></p>
+                        <p>Crea una cuenta de hotel <a href="registrarHotel.php">aqui</a></p>
                     </form>
                 </div>
             </div>
