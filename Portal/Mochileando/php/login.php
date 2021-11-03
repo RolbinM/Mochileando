@@ -10,24 +10,26 @@
 
     $validar_login = "EXECUTE dbo.sp_ValidarUsuario $usuario, $contrasena";
     $ejecutar = sqlsrv_query ($conn_sis, $validar_login);
+    $_SESSION ['usuario'] = $usuario;
 
     if($ejecutar) {
         
         $fila = sqlsrv_fetch_object( $ejecutar);
-        echo"<script>alert('$fila->TipoUsuario')</script>";
                 
         if($fila->TipoUsuario == 1) {
-            $_SESSION ['usuario'] = $usuario;
+            
             //header("location: ../driver.php");
-            header("location: ../menuLateral.html");
+            header("location: ../PortalAdministrador/hoteles.php");
             exit;
         }else if($fila->TipoUsuario == 2){
 
-            echo "Hotel";
+            header("location: ../PortalHotel/miHotel.php");
+            exit;
 
         }else if($fila->TipoUsuario == 3){
 
-            echo "Cliente";
+            header("location: ../PortalCliente/hoteles.php");
+            exit;
 
         }else {
             echo '

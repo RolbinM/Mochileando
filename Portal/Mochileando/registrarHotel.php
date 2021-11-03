@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="signup-form">
-                    <form  method="POST" class="mt-5 p-4 bg-light">
+                    <form  method="POST" class="mt-5 p-4 bg-light" enctype="multipart/form-data">
                         <h3 class="mb-5 text-secondary">Registro de Hotel</h3>
                         
                         <div class="mb-3">
@@ -56,6 +56,11 @@
                         </div>
 
                         <div class="mb-3">
+                            <label>Imagen</label>
+                            <input type="file" name="imagen" class="form-control" accept="image/*" placeholder="Ingrese una imagen" required>
+                        </div>
+
+                        <div class="mb-3">
                            <button class="btn btn-primary float-end" name="enviar">Crear Usuario</button>
                         </div>
 
@@ -76,31 +81,40 @@
             $usuario = $_POST ['usuario'];
             $contraseña  = $_POST ['contraseña'];
 
-            $consulta = "EXECUTE dbo.sp_InsertarHotel '$nombre', '$usuario', 
-                        '$contraseña', '$localidad', '$correo', $telefono";
-            
-            $ejecutar = sqlsrv_query ($conn_sis, $consulta);
-            if($ejecutar){
-                $fila = sqlsrv_fetch_object( $ejecutar);
+            if($_FILES["imagen"]["error"] > 0){
+                echo"<script>alert('Error al cargar la imagen')</script>";
+            }
+            else{  
+                $ruta = 'imagenes/'.$_FILES["imagen"]['name'];
                 
-                if($fila->Codigo == 0) {
-                    echo"<script>alert('Se creo correctamente el usuario')</script>";
-                    echo"<script>window.open('index.php', '_self')</script>";
-                }else if($fila->Codigo == 1){
-                    echo"<script>alert('El usuario ya existe, pruebe con otro')</script>";
-                }else {
-                    echo '
-                    <script>
-                        alert("Datos ingresados erroneamente");
-                    </script>
-                ';
-                }
+                $consulta = "EXECUTE dbo.sp_InsertarHotel '$nombre', '$usuario', 
+                            '$contraseña', '$localidad', '$correo', $telefono, '$ruta'";
+                
+                $ejecutar = sqlsrv_query ($conn_sis, $consulta);
+                if($ejecutar){
+                    $fila = sqlsrv_fetch_object( $ejecutar);
+                    
+                    if($fila->Codigo == 0) {
+                        move_uploaded_file($_FILES["imagen"]['tmp_name'],$ruta);
+                        echo"<script>alert('Se creo correctamente el usuario')</script>";
+                        echo"<script>window.open('index.php', '_self')</script>";
+                    }else if($fila->Codigo == 1){
+                        echo"<script>alert('El usuario ya existe, pruebe con otro')</script>";
+                    }else {
+                        echo '
+                        <script>
+                            alert("Datos ingresados erroneamente");
+                        </script>
+                    ';
+                    }
 
+                }
+                else{
+                    echo"<script>alert('Error, intentelo de nuevo mas tarde')</script>";
+                    echo"<script>window.open('index.php', '_self')</script>";
+                }
             }
-            else{
-                echo"<script>alert('Error, intentelo de nuevo mas tarde')</script>";
-                echo"<script>window.open('index.php', '_self')</script>";
-            }
+
 
         }
     ?>

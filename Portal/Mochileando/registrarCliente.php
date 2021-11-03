@@ -1,4 +1,7 @@
 <!doctype html>
+<?php
+    include 'php/driver.php';
+?>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -70,7 +73,7 @@
             $contraseña  = $_POST ['contraseña'];
 
             $consulta = "EXECUTE dbo.sp_InsertarCliente '$nombre', '$usuario', 
-                        '$contraseña', $cedula, $fechaNacimiento, '$correo'";
+                        '$contraseña', $cedula, '$fechaNacimiento', '$correo'";
             
             $ejecutar = sqlsrv_query ($conn_sis, $consulta);
             if($ejecutar){
