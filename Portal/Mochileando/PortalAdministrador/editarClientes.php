@@ -28,7 +28,7 @@
         </div>
         <br/><br/>
         <div class="form-group">
-            <label>Identificacion:</label>
+            <label>Identificación:</label>
             <input type="number" name="Identificacion" class="form-control" value="<?php echo $identificacion; ?>" readonly/><br/>
         </div>
         <br/><br/>
@@ -44,7 +44,7 @@
         <br/><br/>
         <div class="form-group">
             <label>Contraseña:</label>
-            <input type="password" name="Password" class="form-control" value="<?php echo $Password; ?>" required/><br/>
+            <input type="text" name="Password" class="form-control" value="<?php echo $Password; ?>" required  title="La contraseña contener una mayuscula, una minuscula, un número, un caracter y debe ser de más de 8 caracteres" pattern="(?=(?:.*\d){1})(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})(?=(?:.*[@$+=`~?><#%&*!ยก\-_]){1})\S{6,}" /><br/>
         </div>
         <br/><br/>
         <div class="form-group">

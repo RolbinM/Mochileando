@@ -112,7 +112,7 @@
                             <div class="form-group row">
                                 <h4 class="col-lg-3">Contraseña: </h4>
                                 <div class="col-lg-8">
-                                    <input type="text" value="<?php echo $contra ?>" name="contraseña" required class="form-control">
+                                    <input type="text" value="<?php echo $contra ?>" name="contraseña" required class="form-control" title="La contraseña contener una mayuscula, una minuscula, un número, un caracter y debe ser de más de 8 caracteres" pattern="(?=(?:.*\d){1})(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})(?=(?:.*[@$+=`~?><#%&*!ยก\-_]){1})\S{6,}">
                                 </div>
                             </div>
                             <br>
@@ -138,7 +138,7 @@
                             </div>
                             <br>
                             <div class="form-group row">
-                                <h4 class="col-lg-3">Telefono: </h4>
+                                <h4 class="col-lg-3">Teléfono: </h4>
                                 <div class="col-lg-8">
                                     <input type="text" value="<?php echo $telefono ?>" name="telefono" required class="form-control">
                                 </div>

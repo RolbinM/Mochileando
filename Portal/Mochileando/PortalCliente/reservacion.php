@@ -74,11 +74,11 @@
                         <div class="emptybar"></div>
                         <div class="filledbar"></div>
                     </div>
-                    <h2 class=info><?php echo $fila['Descripcion']?></h2>
-                    <h2 class=info2>Precio: <?php echo $fila['Precio']?>$</h2>
-                    <a class=info3 href="formularioRes.php?IdHotel=<?php echo $IdHotel ?>&IdHospedaje=<?php echo $fila['Id'] ?>">Reservar<a>
+                    <div class="card-body">
+                        <h2 class=info2>Precio: <?php echo $fila['Precio']?>$</h2>
+                        <a class=info3 href="formularioRes.php?IdHotel=<?php echo $IdHotel ?>&IdHospedaje=<?php echo $fila['Id'] ?>">Reservar<a>
+                    </div>
                 </div>
-                
               
             <?php } } ?>
             

@@ -23,8 +23,8 @@
                         <h3 class="mb-5 text-secondary">Registro de Cliente</h3>
 
                         <div class="mb-3">
-                            <label>Cedula</label>
-                            <input type="text" name="cedula" class="form-control" placeholder="Ingrese su cedula" required>
+                            <label>Cédula</label>
+                            <input type="text" name="cedula" class="form-control" placeholder="Ingrese su cédula" required>
                         </div>
                         <div class="mb-3">
                             <label>Nombre</label>
@@ -37,8 +37,8 @@
                         </div>
 
                         <div class="mb-3">
-                            <label>Correo Electronico</label>
-                            <input type="email" name="correo" class="form-control" placeholder="Ingrese su correo electronico" required>
+                            <label>Correo Electrónico</label>
+                            <input type="email" name="correo" class="form-control" placeholder="Ingrese su correo electrónico" required>
                         </div>
 
                         <div class="mb-3">
@@ -48,7 +48,7 @@
 
                         <div class="mb-3">
                             <label>Contraseña</label>
-                            <input type="text" name="contraseña" class="form-control" placeholder="Ingrese su contraseña" required>
+                            <input type="text" name="contraseña" class="form-control" placeholder="Ingrese su contraseña" required  title="La contraseña contener una mayuscula, una minuscula, un número, un caracter y debe ser de más de 8 caracteres" pattern="(?=(?:.*\d){1})(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})(?=(?:.*[@$+=`~?><#%&*!ยก\-_]){1})\S{6,}">
                         </div>
 
                         <div class="mb-3">

@@ -116,7 +116,7 @@
                             </div>
                             <br>
                             <div class="form-group row">
-                                <h4 class="col-lg-3">Descripcion: </h4>
+                                <h4 class="col-lg-3">Descripción: </h4>
                                 <div class="col-lg-8">
                                     <textarea name="descripcion" rows="10" cols="40" required class="form-control"><?php echo $descripcion ?></textarea>
                                 </div>

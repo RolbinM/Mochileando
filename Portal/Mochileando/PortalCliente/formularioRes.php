@@ -62,12 +62,13 @@
         if(isset($_GET['IdHotel']) && isset($_GET['IdHospedaje'])){
             $IdHotel = $_GET['IdHotel'];
             $IdHospedaje = $_GET['IdHospedaje'];
-            $consulta = "EXECUTE dbo.sp_ConsultaHospedajeHotel $IdHotel" ;
+            $consulta = "EXECUTE dbo.sp_ConsultarHospedajeAReservar $IdHospedaje" ;
             $ejecutar = sqlsrv_query ($conn_sis, $consulta);
             $fila = sqlsrv_fetch_array($ejecutar);
             $NombreHotel = $fila ['NombreHotel'];
             $NombreHospedaje = $fila ['Nombre'];
             $Localidad = $fila ['Localidad'];
+            $Descrip = $fila ['Descripcion'];
             $Precio = $fila ['Precio'];
 
         }
@@ -94,6 +95,11 @@
         <div class="form-group">
             <label>Lugar:</label><br>
             <input type="text" name="Lugar" class="form-control"  value="<?php echo $Localidad; ?>" readonly/><br/>
+        </div>
+        <br/><br/>
+        <div class="form-group">
+            <label>Descripcion:</label><br>
+            <textarea name="Descripcion" class="form-control" readonly><?php echo $Descrip; ?></textarea><br/>
         </div>
         <br/><br/>
         <div class="form-group">

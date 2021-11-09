@@ -36,13 +36,13 @@
                         </div>
 
                         <div class="mb-3">
-                            <label>Correo Electronico</label>
-                            <input type="email" name="correo" class="form-control" placeholder="Ingrese su correo electronico" required>
+                            <label>Correo Electrónico</label>
+                            <input type="email" name="correo" class="form-control" placeholder="Ingrese su correo electrónico" required>
                         </div>
 
                         <div class="mb-3">
-                            <label>Telefono</label>
-                            <input type="text" name="telefono" class="form-control" placeholder="Ingrese su numero de telefono" required>
+                            <label>Teléfono</label>
+                            <input type="text" name="telefono" class="form-control" placeholder="Ingrese su número de teléfono" required>
                         </div>
 
                         <div class="mb-3">
@@ -52,7 +52,7 @@
 
                         <div class="mb-3">
                             <label>Contraseña</label>
-                            <input type="text" name="contraseña" class="form-control" placeholder="Ingrese su contraseña" required>
+                            <input type="text" name="contraseña" class="form-control" placeholder="Ingrese su contraseña" required title="La contraseña contener una mayuscula, una minuscula, un número, un caracter y debe ser de más de 8 caracteres" pattern="(?=(?:.*\d){1})(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})(?=(?:.*[@$+=`~?><#%&*!ยก\-_]){1})\S{6,}">
                         </div>
 
                         <div class="mb-3">

@@ -74,16 +74,16 @@
             <input type="text" name="Nombre" class="form-control" placeholder = "Escriba el nombre del cliente nuevo" required/><br/>
         </div>
         <div class="form-group">
-            <label>Identificacion:</label>
-            <input type="number" name="Identificacion" class="form-control"  placeholder = "Escriba la identificacion" required/><br/>
+            <label>Identificación:</label>
+            <input type="number" name="Identificacion" class="form-control"  placeholder = "Escriba la identificación" required/><br/>
         </div>
         <div class="form-group">
             <label>Nacimiento:</label>
             <input type="date" name="Nacimiento" class="form-control"  placeholder = "Escriba la fecha de Nacimiento del Cliente" required/><br/>
         </div>
          <div class="form-group">
-            <label>Correo Electronico:</label>
-            <input type="email" name="correo" class="form-control" placeholder="Ingrese su correo electronico" required><br/>
+            <label>Correo Electrónico:</label>
+            <input type="email" name="correo" class="form-control" placeholder="Ingrese su correo electrónico" required><br/>
         </div>
         <div class="form-group">
             <label>Usuario:</label>
@@ -91,11 +91,11 @@
         </div>
         <div class="form-group">
             <label>Contraseña:</label>
-            <input type="text" name="contraseña" class="form-control" placeholder="Ingrese su contraseña" required><br/>
+            <input type="text" name="contraseña" class="form-control" placeholder="Ingrese su contraseña" required  title="La contraseña contener una mayuscula, una minuscula, un número, un caracter y debe ser de más de 8 caracteres" pattern="(?=(?:.*\d){1})(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})(?=(?:.*[@$+=`~?><#%&*!ยก\-_]){1})\S{6,}" ><br/>
         </div>
         <br/>
         <div class="form-group">
-            <input type="submit" name="insert" class="btn btn-warning" value = "Insertar informacion" /><br/><br/>
+            <input type="submit" name="insert" class="btn btn-warning" value = "Insertar información" /><br/><br/>
         </div>
     </form>
     </div>
@@ -145,12 +145,12 @@
             <tr>
                 <td align="center">Id</td>
                 <td align="center">Nombre</td>
-                <td align="center">Identificacion</td>
+                <td align="center">Identificación</td>
                 <td align="center">Fecha de Nacimiento</td>
                 <td align="center">Correo</td>
                 <td align="center">Usuario</td>
                 <td align="center">Contraseña</td>
-                <td align="center">Edicion</td>
+                <td align="center">Edición</td>
                 <td align="center">Borrado</td>
             </tr>
 

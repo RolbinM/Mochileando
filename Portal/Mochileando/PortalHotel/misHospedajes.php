@@ -102,7 +102,7 @@
                                     <div class="card-body">
                                         <p class="card-text">
                                             <dl class="row">
-                                                <dt class="col-sm-2">Codigo:</dt>
+                                                <dt class="col-sm-2">Código:</dt>
                                                 <dd class="col-sm-10" name='id'><?php echo $fila['Id'] ?></dd>
                                                 <hr>
                                                 <dt class="col-sm-2">Localidad:</dt>
@@ -111,7 +111,7 @@
                                                 <dt class="col-sm-2">Espacios:</dt>
                                                 <dd class="col-sm-10" name='espacios'><?php echo $fila['Espacios'] ?></dd>
                                                 <hr>
-                                                <dt class="col-sm-2">Descripcion:</dt>
+                                                <dt class="col-sm-2">Descripción:</dt>
                                                 <dd class="col-sm-10" name='descripcion'><?php echo $fila['Descripcion'] ?></dd>
                                                 <hr>
                                                 <dt class="col-sm-2">Precio:</dt>
