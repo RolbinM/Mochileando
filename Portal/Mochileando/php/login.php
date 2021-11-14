@@ -8,7 +8,7 @@
     $contrasena = $_POST ['contrasena'];
     //$contrasena = hash('sha512', $contrasena);
 
-    $validar_login = "EXECUTE dbo.sp_ValidarUsuario $usuario, $contrasena";
+    $validar_login = "EXECUTE dbo.sp_ValidarUsuario '$usuario', '$contrasena'";
     $ejecutar = sqlsrv_query ($conn_sis, $validar_login);
     $_SESSION ['usuario'] = $usuario;
 
